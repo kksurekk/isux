@@ -1,0 +1,162 @@
+.br-main{
+    width:1260px;
+    margin:100px auto;    
+}
+.br-main img{
+    animation: move1 1s linear;
+}
+.banner{
+    position: relative;
+    overflow: hidden;
+}
+.banner img{
+    transition: all 0.3s linear;
+}
+.banner:hover img{
+    transform: scale(1.05);
+}
+.info{
+    position: absolute;
+    left:50%;
+    bottom:30px;
+    width:900px;
+    margin-left:-450px;
+    text-align: center;
+}
+.info h1{
+    font-size: 1.75em;
+    font-weight: normal;
+    margin:20px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.info h1 a{
+    color:#fff;
+}
+.info span{
+    color:#fff;
+    display:block;
+    width:120px;
+    border-top: 2px solid #fff;
+    padding:10px 0;
+    text-align: center;
+    margin: 0 auto;
+}
+.info p{
+    font-size: 1.125em;
+    margin-top:10px;
+    color:#fff;
+    line-height: 1.7;
+}
+.brands-list{
+    text-align: center;
+    
+}
+.brands-list li{
+    width:315px;
+    height:315px;
+    border:1px solid rgb(250, 250, 250);
+    float: left;
+}
+.brands-img{
+    width:100%;
+    height:230px;
+}
+.brands-img img{
+    width:100%;
+}
+.brands-title h2{
+    font-size: 1.5em;
+    font-weight: normal;
+    letter-spacing: 2px;
+    padding-left: 2px;
+    line-height: 2;
+}
+.brands-title{
+    width:200px;
+    margin:0 auto;
+}
+.brands-title a{
+    color:#444;
+}
+.brands-title a:hover{
+    color:rgba(0, 0, 0, 1);
+}
+@media screen and (max-width:1024px){
+    .br-main{
+        width:100%;
+        padding:0 20px;
+    }
+    .banner{
+        width:100%;
+        height:470px;
+    }
+    .banner img{
+        height:100%;
+        overflow: hidden;
+    }
+    .banner-img img{
+        width:100%;
+    }
+    .brands-list li{
+        width:33.33%;
+    }
+}
+@media screen and (max-width:768px){
+    .banner{
+        height:350px;
+    }
+    .brands-list li{
+        width:50%;
+    }
+    .info{
+        width:100%;
+        left:50%;
+        margin-left:-364px;
+        padding:0 40px;
+    }
+    .info h1{
+        font-size: 1.625em;
+    }
+    .info span{
+        font-size: 0.875em;
+    }
+    .info p{
+        font-size: 1em;
+    }
+    .brands-title h2{
+        font-size: 1.25rem;
+    }
+}
+@media screen and (max-width: 425px) and (min-width: 320px){
+    .banner{
+        height:162px;
+        width:100%;
+    }
+    .banner img{
+        width:100%;
+    }
+    .info{
+        bottom:10px;
+        margin-left: -192px;
+    }
+    .info h1{
+        font-size: 1.125rem;
+        margin:10px 0;
+    }
+    .info p{
+        display:block;
+        width:100%;
+        height:20px;
+        width:300px;
+        overflow: hidden;
+        font-size: 0.75rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin:0 auto;
+    }
+    .brands-list li{
+        width:100%;
+    }
+}

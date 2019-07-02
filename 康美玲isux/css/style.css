@@ -1,0 +1,475 @@
+/*----基础样式----*/
+body{
+    font-size:1em;
+    font-family: "Microsoft Yahei";
+    /* background-color: #eee; */
+}
+@font-face{
+    font-family:PingFang;
+    src:url(../font/pfzt/苹方黑体-细-简.ttf);
+}
+@font-face{
+    font-family:gotham-book;
+    src:url(../font/gotham/Gotham-Book.otf);
+}
+ul,li,h1,h2,h3,p,h4{
+    margin:0;
+    padding:0;
+}
+*{
+    box-sizing: border-box;
+} 
+a{
+    color:#333;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+/*----基础样式结束----*/
+/*----头部样式----*/
+.header{
+    width:100%;
+    margin:0 auto; 
+    position: fixed;
+    top:0;
+    right:0;
+    z-index: 8;
+    background:#fff;
+    animation: move 1s linear;
+    transition: all 2s ease-out;
+}
+.wrap{
+    width:1260px;
+    height:100px;
+    margin:0 auto;
+    padding:0 60px;
+    position: relative;
+}
+.logo{
+    /* width: 28%; */
+    float: left;
+    margin-top:35px;
+    float: left;
+    margin-right: 200px;
+}
+.logo img{
+    width: 110px;
+}
+.mainmenu li{
+    float: left;
+    margin-right: 3em;
+    line-height: 100px;
+}
+.mainmenu a.current{
+    border-bottom:2px solid #000;
+}
+.mainmenu a{
+    color:#333;
+    padding-bottom:10px;
+    position: relative;;
+}
+.mainmenu a::after{
+    content:"";
+    width:100%;
+    height:2px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    background:#000;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: all .2s cubic-bezier(0.18, 0.89, 0.17, 0.88);
+}
+.current::after{
+    display: none;
+}
+.mainmenu a:hover::after{
+    color:#000;
+    transform: scaleX(1);
+    opacity: 1;
+}
+.icon-seach{
+    font-size: 1.75em;
+    color:#333;
+    line-height: 100px;
+    float: right;
+}
+.Mobilemenu{
+    display: none;
+    position: relative;
+}
+.Mobilseach{
+    display: none;
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+}
+/*----头部样式结束----*/
+/*------主体内容-----*/
+.main{
+    width:1260px;
+    margin: 0px auto;
+    margin-top:100px;
+
+}
+.main img{
+    animation: move1 1s linear;
+    transition: all 0.3s linear;
+}
+.pic{
+    width:102%;
+    text-align: center;
+}
+.pic li{
+    float: left;
+    width:33.333%;
+    border-right:1px solid #fff;
+    border-bottom:1px solid #fff;
+    filter: grayscale(100%);
+    transition: 0.5s linear;
+    overflow: hidden;
+    position: relative;
+}
+.pic img{
+    vertical-align: middle;
+    width:100%;
+    transition: 0.5s linear;
+}
+.pic li:nth-child(1),.pic li:nth-child(6),.pic li:nth-child(10){
+    width:66.666666%;
+}
+.pic li:nth-child(2){
+    border-right: none;
+}
+.pic li:hover{
+    filter: grayscale(0%);
+}
+.pic img:hover{
+    transform:scale(1.05);
+}
+.name h3{
+    font-weight: normal;
+    color:#000;
+    line-height: 50px;
+}
+.name{
+    height:50px;
+    position: absolute;
+    bottom:-100px;
+    left:0;
+    background:rgba(234,227,227,.2);
+    width:100%;
+    transition: 0.4s ease-out;
+}
+.pic li:hover .name{
+    bottom:0;
+}
+/*------主体内容结束-------*/
+/*-----侧边联系二维码------*/
+.contact{
+    position: fixed;
+    right:10px;
+    bottom:200px;
+    padding:4px;
+    transition: all 0.5s ease-out;
+    transform-origin: bottom right;
+}
+.contact img{
+    width:80px;
+}
+.contact:hover{
+    transform: scale(2);
+}
+/*-----侧边联系二维码结束------*/
+/*------底部内容------*/
+#footer{
+    width:1260px;
+    margin:0 auto;
+}
+.cooperation{
+    margin:120px auto;
+    width:300px;
+    /* padding:100px 0; */
+}
+.cooperation li{
+    float: left;
+    width:60px;
+    height:60px;
+}
+.cooperation a{
+    display: block;
+    width:100%;
+    height:100%;
+}
+.wechat{
+    position: relative;
+}
+.wechat a{
+    background:url(../images/wechat.svg) no-repeat center;
+    background-size: 24px 24px;
+}
+.wechat a:hover{
+    background:url(../images/wechat2.svg) 50% 50% no-repeat;
+    background-size: 24px 24px;
+}
+.wechat:hover span{
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(0,-20%,0);
+}
+.weibo a{
+    background:url(../images/weibo.svg) 50% 50% no-repeat;
+    background-size: 24px 24px;
+}
+.weibo a:hover{
+    background:url(../images/weibo2.svg) 50% 50% no-repeat;
+    background-size: 24px 24px;
+}
+.ins a{
+    background:url(../images/ins.svg) 50% 50% no-repeat;
+    background-size: 24px 24px;
+}
+.ins a:hover{
+    background:url(../images/ins2.svg) 50% 50% no-repeat;
+    background-size: 24px 24px;
+}
+.behance a{
+    background:url(../images/behance.svg) 50% 50% no-repeat;
+    background-size: 24px 24px;
+}
+.behance a:hover{
+    background:url(../images/behance2.svg) 50% 50% no-repeat;
+    background-size: 24px 24px;
+}
+.zcool a{
+    background:url(../images/zcool.svg) 50% 50% no-repeat;
+    background-size: 24px 24px;
+}
+.zcool a:hover{
+    background:url(../images/zcool2.svg) 50% 50% no-repeat;
+    background-size: 24px 24px;
+}
+.ewm{
+    position: absolute;
+    bottom:20px;
+    left:50%;
+    width: 230px;
+    height: 230px;
+    margin-left: -115px;
+    visibility: hidden;
+    opacity:0;
+    transition:all 0.5s cubic-bezier(0.4, 0, 0, 1.5);
+}
+.wrapper{
+    height:150px;
+    /* padding:80px 0; */
+}
+.links li{
+    float: left;
+    margin-right: 40px;
+}
+.links a,.copyright a{
+    font-weight: 500;
+    color: #777;
+}
+.links a:hover,.copyright a:hover{
+    color:#000;
+}
+.copyright{
+    float: right;
+}
+/*------底部内容结束------*/
+@keyframes move{
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes move1{
+    0%{
+        transform: translateX(-50px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
+/*--------响应式（媒体查询）-------*/
+@media screen and (max-width:1024px){
+    .wrap{
+        width:100%;
+    }
+    .main{
+        width:100%;
+    }
+    .pic{
+        width:100%;
+    }
+    #footer{
+        width:100%;
+        padding: 0 20px;
+    }
+    .name{
+        width:200px;
+        left:50%;
+        bottom:0;
+        margin-left: -100px;
+        background:none;
+    }
+    .contact{
+        display:none;
+    }
+} 
+@media screen and (max-width:768px){
+    .wrap{
+        height:80px;
+    }
+    .Mobilemenu{
+        display:block;
+        position: absolute; 
+        width:40px;
+        height:40px;
+        right:60px;
+        top:30px;
+    }
+    .logo img{
+        width: 74px;
+    }
+    .mainmenu{
+        display: none;
+        position: absolute;  
+        max-width:200px;
+        right:0px;
+        top:80px;
+        background:rgba(255,255,255, 1);
+        margin-left:0;
+    }
+    .icon-menu{
+        color: #000;
+        font-size: 1.75em; 
+    }
+    .mainmenu ul{
+        padding:20px 0;
+    }
+    .mainmenu li{
+        padding:0px 40px;
+        float:none;
+        line-height: 60px;
+        margin-right:0;
+    }
+    .mainmenu a{
+        color:#000;
+    }
+    .mainmenu a.current{
+        border-bottom:none;
+    }
+    .icon-seach{
+        display: none;
+    }
+    .Mobilseach{
+        display: block; 
+        margin:0 65px;
+
+    }
+    .wrapper{
+        padding:0;
+        height:400px;
+    }
+    .cooperation{
+        margin:40px auto;
+    }
+    .name h3{
+        color:#fff;
+    }
+    .name{
+        width:200px;
+        left:50%;
+        bottom:0;
+        margin-left: -100px;
+        background:none;
+    }
+    .links{
+        padding:0;
+        width:200px;
+        text-align: center;
+        margin:0 auto;
+        float:none;
+    }
+    .links a{
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+    .links li{
+        float: none;
+        padding:40px 0;
+        margin-right:0;
+    }
+    .copyright{
+        float:none;
+        text-align: center;
+        margin-top:40px;
+        float:none;
+        font-size: 0.75rem;
+    }
+    .pic{
+        position: relative;
+    }
+    /* .pic li:nth-child(1),.pic li:nth-child(6){
+        width:100%;
+    }
+    .pic li{
+        width:50%;
+    }
+    .pic3{
+        float: right;
+    }
+    .pic4,.pic5,.pic6,.pic7,.pic8{
+        position: absolute;
+    }
+    .pic5{
+        left:129px;
+        top:384px;
+    }
+    .pic4,.pic6,.pic7,.pic8,.pic9,.pic10,.pic11,.pic12{
+        left:0;
+        top:-384px;
+    }
+    .pic li:nth-child(10){
+        width:50%;
+    }
+    .pic li:nth-child(5),.pic li:nth-child(7),.pic li:nth-child(8){
+        width:256px;
+    } */
+}
+@media screen and (max-width: 425px) and (min-width: 320px){
+    .Mobilemenu{
+        right:20px;
+    }
+    .pic li{
+        width:100%;
+        padding:0 20px;
+    }
+    .pic li img{
+        width:100%;
+    }
+    .pic li:nth-child(1),.pic li:nth-child(6),.pic li:nth-child(10){
+        width:100%;
+    }
+}
+/*--------响应式（媒体查询）结束-------*/
